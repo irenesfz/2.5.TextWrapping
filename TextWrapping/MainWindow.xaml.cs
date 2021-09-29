@@ -22,18 +22,20 @@ namespace TextWrapping
 
         private void NegritaCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (NegritaCheckBox.IsChecked == true)
-                ResultadoTextBlock.FontWeight = FontWeights.Bold;
-            else ResultadoTextBlock.FontWeight = FontWeights.Normal;
+            ResultadoTextBlock.FontWeight = FontWeights.Bold;
         }
-
+        private void NegritaCheckBox_UnChecked(object sender, RoutedEventArgs e)
+        {
+            ResultadoTextBlock.FontWeight = FontWeights.Normal;
+        }
+        private void CursivaCheckBox_UnChecked(object sender, RoutedEventArgs e)
+        {
+            ResultadoTextBlock.FontStyle = FontStyles.Normal;
+        }
         private void CursivaCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (CursivaCheckBox.IsChecked == true)
-                ResultadoTextBlock.FontStyle = FontStyles.Italic;
-            else ResultadoTextBlock.FontStyle = FontStyles.Normal;
+            ResultadoTextBlock.FontStyle = FontStyles.Italic;
         }
-
         private void AzulRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             ResultadoTextBlock.Foreground = Brushes.Blue;
