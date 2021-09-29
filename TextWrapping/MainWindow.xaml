@@ -6,8 +6,77 @@
         xmlns:local="clr-namespace:TextWrapping"
         mc:Ignorable="d"
         Icon="assets/32.ico"
-        Title="Texto con formato" Height="450" Width="800">
+        Title="Texto con formato"
+        Height="300"
+        Width="650">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="78,70,0,0"
+                   TextWrapping="Wrap"
+                   Text="Text"
+                   VerticalAlignment="Top" />
+        <TextBox x:Name="TextoTextBox"
+                 HorizontalAlignment="Left"
+                 Height="66"
+                 Margin="78,91,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="144"
+                 TextChanged="TextoTextBox_TextChanged" />
+        <CheckBox x:Name="NegritaCheckBox"
+                  Content="Negrita"
+                  HorizontalAlignment="Left"
+                  Margin="259,114,0,0"
+                  VerticalAlignment="Top"
+                  FontWeight="Bold"
+                  Checked="NegritaCheckBox_Checked" />
+        <CheckBox x:Name="CursivaCheckBox"
+                  Content="Cursiva"
+                  HorizontalAlignment="Left"
+                  Margin="356,114,0,0"
+                  VerticalAlignment="Top"
+                  FontStyle="Italic"
+                  Checked="CursivaCheckBox_Checked" />
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="454,114,0,0"
+                   TextWrapping="Wrap"
+                   Text="Color del texto"
+                   VerticalAlignment="Top" />
+        <TextBlock x:Name="ResultadoTextBlock"
+                   Text=""
+                   TextAlignment="Center"
+                   TextTrimming="CharacterEllipsis"
+                   HorizontalAlignment="Left"
+                   Margin="41,187,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Height="43"
+                   Width="562"
+                   Background="#FFCDFFCD"
+                   FontSize="31" />
+        <RadioButton x:Name="AzulRadioButton"
+                     IsChecked="True"
+                     GroupName="colores"
+                     Content="Azul"
+                     HorizontalAlignment="Left"
+                     Margin="545,95,0,0"
+                     VerticalAlignment="Top"
+                     Checked="AzulRadioButton_Checked" />
+        <RadioButton x:Name="RojoRadioButton"
+                     Content="Rojo"
+                     GroupName="colores"
+                     HorizontalAlignment="Left"
+                     Margin="545,119,0,0"
+                     VerticalAlignment="Top"
+                     Checked="RojoRadioButton_Checked" />
+        <RadioButton x:Name="VerdeRadioButton"
+                     Content="Verde"
+                     GroupName="colores"
+                     HorizontalAlignment="Left"
+                     Margin="545,143,0,0"
+                     VerticalAlignment="Top"
+                     Checked="VerdeRadioButton_Checked" />
+
+
     </Grid>
 </Window>
